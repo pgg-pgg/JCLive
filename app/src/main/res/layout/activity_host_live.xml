@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pgg.jclive.widget.SizeChangeRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/size_change_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tencent.ilivesdk.view.AVRootView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/live_view"
+        android:background="@android:color/white"/>
+
+    <com.pgg.jclive.widget.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_view"
+        android:layout_alignParentBottom="true">
+
+        <com.pgg.jclive.widget.BottomControlView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/control_view"/>
+
+        <com.pgg.jclive.widget.ChatView
+            android:id="@+id/chat_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_view"
+        android:orientation="horizontal">
+
+        <com.pgg.jclive.widget.ChatMsgListView
+            android:id="@+id/chat_list"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_weight="2" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</com.pgg.jclive.widget.SizeChangeRelativeLayout>
